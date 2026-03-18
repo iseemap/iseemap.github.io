@@ -31,7 +31,20 @@
 
   gtag('config', 'AW-16456931621');
 </script>
-
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-16456931621/7PlfCPOpxpEZEKWyo6c9',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
   </head>
   <body>
 	  <div class="py-2 bg-primary">
